@@ -5,23 +5,23 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+back-end/necto-api/.bundle
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+back-end/necto-api/log/*
+back-end/necto-api/tmp/*
+back-end/necto-api!/log/.keep
+back-end/necto-api!/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+back-end/necto-api/tmp/pids/*
+back-end/necto-api!/tmp/pids/
+back-end/necto-api!/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/storage/*
-!/storage/.keep
-.byebug_history
+back-end/necto-api/storage/*
+back-end/necto-api!/storage/.keep
+back-end/necto-api.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+back-end/necto-api/config/master.key
