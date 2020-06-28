@@ -1,7 +1,7 @@
 class Checkin < ApplicationRecord
     # Relations
-    belongs_to :users
-    belongs_to :points
+    belongs_to :user
+    belongs_to :point
 
     # Validations
     validates :date, presence:true

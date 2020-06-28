@@ -27,10 +27,10 @@ class User < ApplicationRecord
     def loop_to_catch_points
         check = Array.new
         self.checkins.each do |checkin|
-            puts checkin
-            check.append({date: checkin.date, hour: checkin.hour})
+            check.append({date: checkin.created_at, local: checkin.point.initials})
         end
         puts check
+        check
     end
 
 end
