@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :points
+  resources :initials
   resources :notifcations
   resources :checkins
   resources :users
