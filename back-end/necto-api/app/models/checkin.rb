@@ -4,7 +4,7 @@ class Checkin < ApplicationRecord
     belongs_to :points
 
     # Validations
-    validates :date, confirmation:true
-    validates :hour, confirmation:true
+    validates :date, presence:true
+    validates :hour, presence:true
 
 end

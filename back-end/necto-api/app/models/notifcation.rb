@@ -4,6 +4,6 @@ class Notifcation < ApplicationRecord
     belongs_to :point
 
     # Validations
-    validates :notification_type, confirmation:true
+    validates :notification_type, presence:true
 
 end

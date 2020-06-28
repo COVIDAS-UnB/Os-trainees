@@ -46,6 +46,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:name, :password, :registration, :program)
+      params.require(:user).permit(:name, :password, :registration, :program, :health_id)
     end
 end

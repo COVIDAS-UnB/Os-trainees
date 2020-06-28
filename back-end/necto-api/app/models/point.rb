@@ -4,10 +4,10 @@ class Point < ApplicationRecord
     has_many :notifcations
 
     # Validations
-    validates :initials, confirmation:true
-    validates :name, confirmation:true
-    validates :address, confirmation:true
-    validates :latitude, confirmation:true
-    validates :longitude, confirmation:true
+    validates :initials, presence:true
+    validates :name, presence:true
+    validates :address, presence:true
+    validates :latitude, presence:true
+    validates :longitude, presence:true
 
 end
