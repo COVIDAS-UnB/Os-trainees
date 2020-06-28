@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_06_28_182107) do
-=======
-ActiveRecord::Schema.define(version: 2020_06_28_174439) do
->>>>>>> 7f33544beab52f8d0a9fc61383ab81b2d3d689f1
+ActiveRecord::Schema.define(version: 2020_06_28_182723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +21,8 @@ ActiveRecord::Schema.define(version: 2020_06_28_174439) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
+    t.bigint "point_id", null: false
+    t.index ["point_id"], name: "index_checkins_on_point_id"
     t.index ["user_id"], name: "index_checkins_on_user_id"
   end
 
@@ -64,5 +62,6 @@ ActiveRecord::Schema.define(version: 2020_06_28_174439) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "checkins", "points"
   add_foreign_key "checkins", "users"
 end
