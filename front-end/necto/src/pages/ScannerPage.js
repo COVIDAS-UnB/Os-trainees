@@ -4,7 +4,7 @@ import { BarCodeScanner } from "expo-barcode-scanner";
 
 import NavBar from "../components/NavBar";
 
-export default function App() {
+export default function ScannerPage({ navigation }) {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
 
@@ -37,7 +37,7 @@ export default function App() {
       {scanned && (
         <Button title={"Tap to Scan Again"} onPress={() => setScanned(false)} />
       )}
-      <NavBar />
+      <NavBar navigation={navigation} />
     </View>
   );
 }
