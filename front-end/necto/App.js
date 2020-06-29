@@ -1,10 +1,11 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
+import Login from "./src/Pages/Login"
 
 export default function App() {
   return (
     <View>
-      <Text>Olá eu sou o necto!</Text>
+      <Login></Login>
     </View>
   );
 }
