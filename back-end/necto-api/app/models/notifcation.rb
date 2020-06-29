@@ -5,5 +5,6 @@ class Notifcation < ApplicationRecord
 
     # Validations
     validates :notification_type, presence:true
+    validates :show, presence:true
 
 end

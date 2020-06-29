@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_29_001556) do
+ActiveRecord::Schema.define(version: 2020_06_29_154256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "checkins", force: :cascade do |t|
-    t.string "date"
-    t.string "hour"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.bigint "point_id", null: false
+    t.float "hour"
+    t.date "date_created"
     t.index ["point_id"], name: "index_checkins_on_point_id"
     t.index ["user_id"], name: "index_checkins_on_user_id"
   end
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_06_29_001556) do
     t.string "notification_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "show"
   end
 
   create_table "notifications_users", id: false, force: :cascade do |t|

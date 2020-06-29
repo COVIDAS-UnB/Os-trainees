@@ -76,19 +76,19 @@ user = User.create(
 checkin = Checkin.create(
     [
         {
-            date: "muitas",
+            date_created: Time.now,
             hour: "várias tbm",
             user_id: 1,
             point_id: 1
         },
         {
-            date: "muitas",
+            date_created: Time.now,
             hour: "várias tbm",
             user_id: 2,
             point_id: 2
         },
         {
-            date: "muitas",
+            date_created: Time.now,
             hour: "várias tbm",
             user_id: 3,
             point_id: 3

@@ -21,7 +21,6 @@ class User < ApplicationRecord
                 puts "Puts mano, tá bem n"
                 user_points = loop_to_catch_points
                 point_checkins(user_points)
-                # loop_to_catch_user_notifications(user_points)
             end     
         end
     end
@@ -29,31 +28,19 @@ class User < ApplicationRecord
     def loop_to_catch_points
         check = Array.new
         self.checkins.each do |checkin|
-            check.append({local_id: checkin.point_id})
+            check.append({point_id:checkin.point_id, date:checkin.created_at.strftime("%d/%m/%Y"), hour: checkin.created_at.strftime("%I.%M")})
         end
+        puts check
         check
     end
 
-    # A gente pega todos os locais que o infectado frequentou
-    # A gente vai criar a notificação e percorrer checkins dos locais que o infectado frequentou
-    # A gente vai vincular a notificação ao uusuário que teve o contato
-
     def point_checkins(points)
-        not = Notification.create(notification_type: "Um caso de covid foi confirmado")
+        @not = Notifcation.create(notification_type: "Um caso de covid foi confirmado", show: true)
+        all_checkins = Array.new
         points.each do |point|
-            Point.find(point.local_id)
+            all_checkins.append(Point.find(point[:point_id]).checkins.all)
         end
+        puts json:({checkin: Checkin.where("created_at = '2020-06-29 14:58:26'"), texto: "alou"})
     end
-
-    # def loop_to_catch_user_notifications(user_points)
-    #     @users = User.all
-    #     notification_user = Array.new
-    #     @users.each do |user|
-    #         if user_points.local_id == user.checkin.point_id
-    #             notification_user.append()
-    #         end
-    #     end
-    #     puts user_points
-    # end
 
 end
