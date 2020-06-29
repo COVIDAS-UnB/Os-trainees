@@ -12,7 +12,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="ScannerPage" component={ScannerPage} />
+        <Stack.Screen name="Scanner" component={ScannerPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
