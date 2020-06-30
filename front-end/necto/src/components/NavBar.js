@@ -15,38 +15,23 @@ export default function Navbar({ navigation }) {
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("Histórico")}
+        onPress={() => navigation.navigate("Mapa")}
       >
-        <Icon
-          onPress={() => navigation.navigate("Mapa")}
-          name="map-marker"
-          size={24}
-          color="#AAA"
-        />
+        <Icon name="map-marker" size={24} color="#AAA" />
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("Histórico")}
+        onPress={() => navigation.navigate("Reportar")}
       >
-        <Icon
-          onPress={() => navigation.navigate("Reportar")}
-          name="chat-alert"
-          size={24}
-          color="#AAA"
-        />
+        <Icon name="chat-alert" size={24} color="#AAA" />
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("Histórico")}
+        onPress={() => navigation.navigate("Meu Perfil")}
       >
-        <Icon
-          onPress={() => navigation.navigate("Meu Perfil")}
-          name="account"
-          size={24}
-          color="#AAA"
-        />
+        <Icon name="account" size={24} color="#AAA" />
       </TouchableOpacity>
     </View>
   );
