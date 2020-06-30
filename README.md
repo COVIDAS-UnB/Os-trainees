@@ -1,14 +1,18 @@
 # Os-trainees
-# PROBLEMA:
-Necessidade de distanciamento físico constante entre as pessoas - Formas de comportamento e Aspectos de planejamento físico/ambientais
-# Necto
 
+## PROBLEMA
+---
+Necessidade de distanciamento físico constante entre as pessoas - Formas de comportamento e Aspectos de planejamento físico/ambientais
+## Necto
+---
 Necto é uma aplicação mobile com o objetivo de ajudar no monitoramento de usuários num cenário pós pandemia. A ideia consiste de os usuários lerem um QR Code antes de entrar em um ambiente fechado registrando a data e a hora que esteve. Quando um usuário for diagnosticado com covid a aplicação verifica os locais onde esteve e notifica as pessoas que estiveram no mesmo local na mesma hora.
 
-# Pitch
+## Pitch
+---
 [Vídeo do Projeto](https://youtu.be/8SPAasRP2JI)
 
-# Funcionalidades
+## Funcionalidades
+---
 
   - Leitura de QR Code para o registro de cada ambiente que o usuário entrar
   
@@ -52,7 +56,7 @@ expo start
 
 5 - Pronto! Apos compilar ele te mostrará como está o aplicativo.
 
-### Equipe
+## Equipe
 ---
   * Ana Paula Costa
   * Felipe Fontenele
@@ -60,6 +64,6 @@ expo start
   * Nataly Lacerda
   * Pedro Henrique
   * Priscila Angel
-### Mentor
+## Mentor
 ---
 Luís Paulo Garcia
