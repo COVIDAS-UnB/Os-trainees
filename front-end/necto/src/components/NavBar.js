@@ -54,6 +54,7 @@ export default function Navbar({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
+    paddingBottom: 20,
     backgroundColor: "#FFF",
     alignSelf: "stretch",
     height: 75,
@@ -61,6 +62,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
   },
+
   button: {
     justifyContent: "center",
     alignItems: "center",
