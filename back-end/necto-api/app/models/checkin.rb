@@ -5,14 +5,11 @@ class Checkin < ApplicationRecord
     belongs_to :user
     belongs_to :point
 
-    # Validations
-    validates :date_created, presence:true
-    validates :hour, presence:true
-
     private
 
     def set_hour
-        self.hour = self.created_at.strftime("%I.%M").to_f
+        self.date_created = self.created_at.strftime("%d/%m/%Y")
+        self.hour = self.created_at.strftime("%H.%M").to_f
         self.save
     end
 

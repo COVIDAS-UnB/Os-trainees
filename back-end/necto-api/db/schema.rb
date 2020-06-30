@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_29_154256) do
+ActiveRecord::Schema.define(version: 2020_06_29_231019) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2020_06_29_154256) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.bigint "point_id", null: false
-    t.float "hour"
     t.date "date_created"
+    t.float "hour"
     t.index ["point_id"], name: "index_checkins_on_point_id"
     t.index ["user_id"], name: "index_checkins_on_user_id"
   end
