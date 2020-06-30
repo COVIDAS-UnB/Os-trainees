@@ -12,6 +12,7 @@ import MapPage from "./src/pages/MapPage";
 import ReportPage from "./src/pages/ReportPage";
 import ProfilePage from "./src/pages/ProfilePage";
 import NotificationPage from "./src/pages/NotificationPage";
+import Sintomas from "./src/pages/Sintomas";
 
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -111,6 +112,21 @@ export default function App() {
         <Stack.Screen
           name="Notificações"
           component={NotificationPage}
+          options={({ navigation }) => ({
+            headerRight: (props) => (
+              <Icon
+                style={styles.bell}
+                name="bell-outline"
+                size={26}
+                onPress={() => navigation.navigate("Notificações")}
+                color="#fff"
+              />
+            ),
+          })}
+        />
+        <Stack.Screen
+          name="Sintomas"
+          component={Sintomas}
           options={({ navigation }) => ({
             headerRight: (props) => (
               <Icon
