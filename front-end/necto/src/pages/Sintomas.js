@@ -120,9 +120,8 @@ const styles = StyleSheet.create({
   symptoms: {
     width: 230,
     margin: 5,
-    flexDirection: "row",
+    flexDirection: "column",
     flexWrap: "wrap",
-    // backgroundColor: "black",
     alignItems: "center",
     justifyContent: "space-around",
   },
