@@ -5,6 +5,9 @@ Necessidade de distanciamento físico constante entre as pessoas - Formas de com
 
 Necto é uma aplicação mobile com o objetivo de ajudar no monitoramento de usuários num cenário pós pandemia. A ideia consiste de os usuários lerem um QR Code antes de entrar em um ambiente fechado registrando a data e a hora que esteve. Quando um usuário for diagnosticado com covid a aplicação verifica os locais onde esteve e notifica as pessoas que estiveram no mesmo local na mesma hora.
 
+# Pitch
+[Vídeo do Projeto](https://youtu.be/8SPAasRP2JI)
+
 # Funcionalidades
 
   - Leitura de QR Code para o registro de cada ambiente que o usuário entrar
