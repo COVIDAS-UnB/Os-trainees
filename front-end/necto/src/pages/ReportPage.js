@@ -44,8 +44,18 @@ export default function ReportPage({ navigation }) {
         <Text style={styles.question}> Como está sua saúde no momento?</Text>
 
         <View style={styles.enquete}>
-          <Text style={styles.buttonBem}>Bem</Text>
-          <Text style={styles.buttonMal}>Mal</Text>
+          <Text
+            style={styles.buttonBem}
+            onPress={() => alert("Obrigado pelo seu report!")}
+          >
+            Bem
+          </Text>
+          <Text
+            style={styles.buttonMal}
+            onPress={() => navigation.navigate("Sintomas")}
+          >
+            Mal
+          </Text>
         </View>
       </View>
 

@@ -34,6 +34,7 @@ export default function HistoryPage({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: "center",
   },
   contentContainer: {
     marginBottom: 75,

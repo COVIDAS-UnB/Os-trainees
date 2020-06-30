@@ -2,15 +2,28 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, TouchableHighlight } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-import NavBar from "./src/components/NavBar";
-import Header from "./src/components/Header";
+import NavBar from "../components/NavBar";
 
-export default function App() {
+export default function Sintomas({ navigation }) {
+  const handleInform = () => {
+    alert("Obrigado por registrar seus sintomas!");
+    navigation.navigate("Histórico");
+  };
+
+  const handleDiagnostic = () => {
+    alert("Obrigado por iformar!");
+    navigation.navigate("Histórico");
+  };
+
+  const [tosse, setTosse] = useState(false);
+  const [febre, setFebre] = useState(false);
+  const [respirar, setRespirar] = useState(false);
+  const [fadiga, setFadiga] = useState(false);
+  const [tosse, setTosse] = useState(false);
+  const [tosse, setTosse] = useState(false);
 
   return (
     <View style={styles.container}>
-      <Header title="Sintomas" />
-
       <Text style={styles.title}>Quais sintomas você está sentindo?</Text>
 
       <View style={styles.symptoms}>
@@ -22,14 +35,21 @@ export default function App() {
         <Text style={styles.card}>Dor de cabeça</Text>
       </View>
 
-      <Text style={styles.noSymptom}>Nenhum desses</Text>
+      <View>
+        <Text style={styles.noSymptom} onPress={handleInform}>
+          Informar
+        </Text>
+        <Text style={styles.buttonDiagnostico} onPress={handleDiagnostic}>
+          Fui diagnosticado
+        </Text>
+      </View>
 
-      <Text onPress={() => alert("Obrigado por registrar seus sintomas!")} style={styles.enviar}>
-        Enviar<Icon name="arrow-right" size={24} color="#FF6B6B"/>
-      </Text> 
-      
-      
-      <NavBar />
+      <Text style={styles.enviar}>
+        Enviar
+        <Icon name="arrow-right" size={24} color="#FF6B6B" />
+      </Text>
+
+      <NavBar navigation={navigation} />
     </View>
   );
 }
@@ -39,7 +59,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#e4e4e4",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
   },
 
   title: {
@@ -91,6 +111,18 @@ const styles = StyleSheet.create({
     alignItems: "flex-end",
     justifyContent: "center",
     fontSize: 16,
-    marginRight: 5,
+    marginRight: 10,
+  },
+  buttonDiagnostico: {
+    fontSize: 16,
+    backgroundColor: "#BB4747",
+    textAlign: "center",
+    color: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 5,
+    padding: 10,
+    width: 220,
+    margin: 5,
   },
 });
