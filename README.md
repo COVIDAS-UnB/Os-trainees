@@ -10,6 +10,7 @@ Necto é uma aplicação mobile com o objetivo de ajudar no monitoramento de usu
   - Leitura de QR Code para o registro de cada ambiente que o usuário entrar
   - Notificação em tempo real
   - Mapa com locais onde os QR Codes se encontram
+  
   ![scanner](https://github.com/COVIDAS-UnB/Os-trainees/blob/master/front-end/images/scanner.png)
  
 
