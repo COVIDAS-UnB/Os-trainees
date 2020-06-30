@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { NavigationRouteContext } from "@react-navigation/native";
+import { Dimensions } from "react-native";
 
 export default function Navbar({ navigation }) {
   return (
@@ -41,11 +42,14 @@ const styles = StyleSheet.create({
   container: {
     paddingBottom: 20,
     backgroundColor: "#FFF",
-    alignSelf: "stretch",
+    flex: 1,
     height: 75,
     flexDirection: "row",
+    width: Dimensions.get("window").width,
     justifyContent: "space-around",
     alignItems: "center",
+    position: "absolute",
+    bottom: 0,
   },
 
   button: {

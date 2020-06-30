@@ -30,15 +30,6 @@ export default function App() {
           headerTitleStyle: {
             marginLeft: 16,
           },
-          // headerRight: ({ navigation }) => (
-          //   <Icon
-          //     style={styles.bell}
-          //     name="bell-outline"
-          //     size={26}
-          //     onPress={() => navigation.navigate("Notificações")}
-          //     color="#fff"
-          //   />
-          // ),
         }}
       >
         <Stack.Screen name="Login" component={LoginPage} />
