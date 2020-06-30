@@ -8,10 +8,15 @@ Necto é uma aplicação mobile com o objetivo de ajudar no monitoramento de usu
 # Funcionalidades
 
   - Leitura de QR Code para o registro de cada ambiente que o usuário entrar
-  - Notificação em tempo real
-  - Mapa com locais onde os QR Codes se encontram
   
   ![scanner](https://github.com/COVIDAS-UnB/Os-trainees/blob/master/front-end/images/scanner.png)
+  ![scanner confirmation](https://github.com/COVIDAS-UnB/Os-trainees/blob/master/front-end/images/scannerconfirmation.png)
+  - Notificação em tempo real
+  
+  ![notification](https://github.com/COVIDAS-UnB/Os-trainees/blob/master/front-end/images/notifications.png)
+  - Mapa com locais onde os QR Codes se encontram
+  
+  ![map](https://github.com/COVIDAS-UnB/Os-trainees/blob/master/front-end/images/mapa.png)
  
 
 ### Tecnologias
