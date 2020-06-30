@@ -21,7 +21,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Histórico"
+        initialRouteName="Login"
         screenOptions={{
           headerStyle: {
             backgroundColor: "#FF6B6B",
@@ -30,24 +30,108 @@ export default function App() {
           headerTitleStyle: {
             marginLeft: 16,
           },
-          headerRight: () => (
-            <Icon
-              style={styles.bell}
-              name="bell-outline"
-              size={26}
-              onPress={() => alert("This is a button!")}
-              color="#fff"
-            />
-          ),
+          // headerRight: ({ navigation }) => (
+          //   <Icon
+          //     style={styles.bell}
+          //     name="bell-outline"
+          //     size={26}
+          //     onPress={() => navigation.navigate("Notificações")}
+          //     color="#fff"
+          //   />
+          // ),
         }}
       >
         <Stack.Screen name="Login" component={LoginPage} />
-        <Stack.Screen name="Scanner" component={ScannerPage} />
-        <Stack.Screen name="Histórico" component={HistoryPage} />
-        <Stack.Screen name="Mapa" component={MapPage} />
-        <Stack.Screen name="Reportar" component={ReportPage} />
-        <Stack.Screen name="Meu Perfil" component={ProfilePage} />
-        <Stack.Screen name="Notificações" component={NotificationPage} />
+        <Stack.Screen
+          name="Scanner"
+          component={ScannerPage}
+          options={({ navigation }) => ({
+            headerRight: (props) => (
+              <Icon
+                style={styles.bell}
+                name="bell-outline"
+                size={26}
+                onPress={() => navigation.navigate("Notificações")}
+                color="#fff"
+              />
+            ),
+          })}
+        />
+        <Stack.Screen
+          name="Histórico"
+          component={HistoryPage}
+          options={({ navigation }) => ({
+            headerRight: (props) => (
+              <Icon
+                style={styles.bell}
+                name="bell-outline"
+                size={26}
+                onPress={() => navigation.navigate("Notificações")}
+                color="#fff"
+              />
+            ),
+          })}
+        />
+        <Stack.Screen
+          name="Mapa"
+          component={MapPage}
+          options={({ navigation }) => ({
+            headerRight: (props) => (
+              <Icon
+                style={styles.bell}
+                name="bell-outline"
+                size={26}
+                onPress={() => navigation.navigate("Notificações")}
+                color="#fff"
+              />
+            ),
+          })}
+        />
+        <Stack.Screen
+          name="Reportar"
+          component={ReportPage}
+          options={({ navigation }) => ({
+            headerRight: (props) => (
+              <Icon
+                style={styles.bell}
+                name="bell-outline"
+                size={26}
+                onPress={() => navigation.navigate("Notificações")}
+                color="#fff"
+              />
+            ),
+          })}
+        />
+        <Stack.Screen
+          name="Meu Perfil"
+          component={ProfilePage}
+          options={({ navigation }) => ({
+            headerRight: (props) => (
+              <Icon
+                style={styles.bell}
+                name="bell-outline"
+                size={26}
+                onPress={() => navigation.navigate("Notificações")}
+                color="#fff"
+              />
+            ),
+          })}
+        />
+        <Stack.Screen
+          name="Notificações"
+          component={NotificationPage}
+          options={({ navigation }) => ({
+            headerRight: (props) => (
+              <Icon
+                style={styles.bell}
+                name="bell-outline"
+                size={26}
+                onPress={() => navigation.navigate("Notificações")}
+                color="#fff"
+              />
+            ),
+          })}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
