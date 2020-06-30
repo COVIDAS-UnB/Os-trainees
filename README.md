@@ -46,4 +46,5 @@ cd Os-trainees/front-end/necto/
 expo start
 ```
 4 - Ele abrirá uma aba no seu navegador com um QR Code. Baixe o aplicativo do expo no seu celular e leia o código.
+
 5 - Pronto! Apos compilar ele te mostrará como está o aplicativo.
