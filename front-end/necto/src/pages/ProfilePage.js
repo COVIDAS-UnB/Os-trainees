@@ -1,31 +1,29 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-
 import NavBar from "../components/NavBar";
+import ScanButton from "../components/ScanButton";
 
 export default function ProfilePage({ navigation }) {
- 
   return (
     <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        <Icon
+          style={styles.icon}
+          name="account-circle"
+          size={150}
+          color="#FFF"
+        />
+        <Text style={styles.name}>Ana Paula Nóbrega</Text>
 
-      <Icon name="account-circle" size={180} color="#FFF" />
-      <Text style={styles.name}>ANA PAULA NÓBREGA</Text>
-      <View style={styles.informacao}>
-       
-        
-        <Text style={styles.idade}>Idade: 19 anos</Text>
-        <Text style={styles.matricula}>Matricula: 198236737</Text>
-        <Text style={styles.curso}>Curso: Arquitetura</Text>
-      </View>
-      <View style={styles.container2}>
-      <Text style={styles.title}> Como está sua saúde no momento?</Text>
-      
-        <Text style={styles.bem} >Bem</Text>
-        <Text style={styles.mal} >Mal</Text>
-
-      </View>
+        <View style={styles.informacao}>
+          <Text style={styles.itemInfo}>Idade: 19 anos</Text>
+          <Text style={styles.itemInfo}>Matricula: 198236737</Text>
+          <Text style={styles.itemInfo}>Curso: Arquitetura</Text>
+        </View>
+      </ScrollView>
+      <ScanButton navigation={navigation} />
 
       <NavBar navigation={navigation} />
     </View>
@@ -36,52 +34,79 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignContent: "center",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
   },
+
+  contentContainer: {
+    paddingBottom: 75,
+  },
+
+  icon: {
+    alignSelf: "center",
+  },
+
   name: {
     alignSelf: "center",
-    position: "absolute",
-    fontSize: 17,
-    width: 280,
+    fontSize: 25,
+    width: 300,
     padding: 10,
+    paddingBottom: 20,
     margin: 10,
-    color: "black", 
     textAlign: "center",
+    borderBottomWidth: 1,
+    borderBottomColor: "gray",
   },
-  container2: {
+
+  enquete: {
     display: "flex",
   },
+
   informacao: {
-    padding: 40,
+    padding: 20,
     backgroundColor: "white",
     borderRadius: 20,
     margin: 20,
-    marginTop: 45,
+    marginTop: 10,
   },
-  bem:{
+
+  itemInfo: {
+    fontSize: 16,
+    lineHeight: 25,
+  },
+
+  question: {
     fontSize: 18,
-    padding: 10,
-    borderRadius: 30,
-    alignSelf: "center",
-    backgroundColor: "#A8A7AB",
-    borderRadius: 30,
-    color: "white",
-    margin: 15,
-  },
-  mal:{
-    fontSize: 18,
-    padding: 10,
-    borderRadius: 30,
-    alignSelf: "center",
-    backgroundColor: "#A8A7AB",
-    borderRadius: 30,
-    color: "white",
-    margin: 15,
-  },
-  title:{
     textAlign: "center",
     alignContent: "center",
-    position: "absolute",
-  }
-  
+    alignSelf: "center",
+  },
+
+  enquete: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginBottom: 20,
+  },
+
+  buttonBem: {
+    fontSize: 18,
+    padding: 15,
+    borderRadius: 10,
+    alignSelf: "center",
+    backgroundColor: "#47BB4c",
+    color: "white",
+    marginHorizontal: 30,
+    marginBottom: 60,
+    marginTop: 30,
+  },
+  buttonMal: {
+    fontSize: 18,
+    padding: 15,
+    borderRadius: 10,
+    alignSelf: "center",
+    backgroundColor: "#bb4747",
+    color: "white",
+    marginHorizontal: 20,
+    marginBottom: 60,
+    marginTop: 30,
+  },
 });

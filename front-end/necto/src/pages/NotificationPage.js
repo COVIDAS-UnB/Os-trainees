@@ -1,14 +1,28 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, ScrollView, View } from "react-native";
 
 import NavBar from "../components/NavBar";
-import CheckinCard from "../components/CheckinCard";
+import ScanButton from "../components/ScanButton";
+import NotificationCard from "../components/NotificationCard";
 
-export default function Notification({ navigation }) {
+export default function NotificationPage({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Notification Page</Text>
-      <CheckinCard />
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        <NotificationCard
+          title="Caso Confirmado"
+          description="Uma pessoa diagnosticada com COVID-19 frequentou um local que você estava."
+          color="#ff3131"
+          place="Biblioteca Central"
+        />
+        <NotificationCard
+          title="Caso Suspeito    "
+          description="Uma pessoa apresentando sintômas do COVID-19 frequentou um local que você estava."
+          color="#edf12d"
+          place="PJC, Sala 044"
+        />
+      </ScrollView>
+      <ScanButton navigation={navigation} />
       <NavBar navigation={navigation} />
     </View>
   );
@@ -16,7 +30,9 @@ export default function Notification({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
-    alignItems: "center",
+    flex: 1,
+  },
+  contentContainer: {
+    marginBottom: 75,
   },
 });
