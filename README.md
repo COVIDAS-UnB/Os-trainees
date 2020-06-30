@@ -25,7 +25,7 @@ Necto utiliza essas tecnologias para facilitar o desenvolvimento:
 
 * [React Native](https://github.com/facebook/react-native) - Desenvolver apps com a facilidade do desenvolvimento web!
 * [Ruby on Rails](https://rubyonrails.org/) - Criar uma api para servir como um banco de dados.
-* [Expo] - Utilizado para testar o aplicativo em react native.
+* [Expo](https://expo.io/) - Utilizado para testar o aplicativo em react native.
 
 ### Instalação
 É necessário que o [react native](https://reactnative.dev/docs/environment-setup), [ruby on rails](https://guides.rubyonrails.org/v5.0/getting_started.html), [expo](https://expo.io/learn), [npm](https://www.npmjs.com/get-npm) (ou [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)) e o [nodeJS](https://nodejs.org/en/download/package-manager/).
