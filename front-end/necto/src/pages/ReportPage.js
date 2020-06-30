@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Text, View, StyleSheet, Button, FlatList, Image } from "react-native";
+import { Text, View, StyleSheet, Button, FlatList, Image, Modal } from "react-native";
+import { MaterialIcons } from '@expo/vector-icons'
+
 
 
 import NavBar from "../components/NavBar";
 
 export default function ReportPage({ navigation }) {
+  const[modalOpen, setModalOpen] = useState(false);
   const [recomend, setRecomend] = useState([
     {text: '1. Reporte diagnóstico\n', key: '1' },
     {text: '2. Pratique o isolamento social\n', key: '2' },
@@ -12,10 +15,16 @@ export default function ReportPage({ navigation }) {
     {text: '4. Limpe com frequência as superfícies tocadas\n', key: '4' },
     {text: '5. Se os sintomas forem fortes ligue: (61) 2017-1900\n', key: '5' },
 ])
-
+  
   return (
     <View style={styles.container}>
-
+          <Modal visible={modalOpen} animationType='slide'>
+              <View style={StyleSheet.modalContent}>
+              <MaterialIcons name='close' onPress={()=> setModalOpen(false) }/>
+                <Text> Hello from the modal :)</Text>
+              </View>
+          </Modal>
+          <MaterialIcons name='add' onPress={()=> setModalOpen(true) }/>
       <View style={styles.content}> 
         <Text style={styles.title}> FOI DIAGNOSTICADO COM COVID-19?</Text>
         
@@ -27,13 +36,14 @@ export default function ReportPage({ navigation }) {
               )}
           />
           </View>
-          <Text style={styles.reportar} >Reportar</Text>
-        
+          
+
+          
       </View>
 
     <NavBar style={styles.nav} navigation={navigation} />
 
-    </View>
+  </View>
   );
 }
 

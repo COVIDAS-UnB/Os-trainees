@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions} from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { NavigationRouteContext } from "@react-navigation/native";
 
@@ -46,6 +46,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
+    position: "absolute",
+    bottom: 0,
+    width: Dimensions.get("window").width,
   },
 
   button: {
