@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TouchableHighlight } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import NavBar from "../components/NavBar";
@@ -19,20 +19,50 @@ export default function Sintomas({ navigation }) {
   const [febre, setFebre] = useState(false);
   const [respirar, setRespirar] = useState(false);
   const [fadiga, setFadiga] = useState(false);
-  const [tosse, setTosse] = useState(false);
-  const [tosse, setTosse] = useState(false);
+  const [diarreia, setDiarreia] = useState(false);
+  const [dor, setDor] = useState(false);
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Quais sintomas você está sentindo?</Text>
 
       <View style={styles.symptoms}>
-        <Text style={styles.card}>Tosse seca</Text>
-        <Text style={styles.card}>Febre</Text>
-        <Text style={styles.card}>Dificuldade de respirar</Text>
-        <Text style={styles.card}>Fadiga</Text>
-        <Text style={styles.card}>Diarreia</Text>
-        <Text style={styles.card}>Dor de cabeça</Text>
+        <Text
+          onPress={() => setTosse(!tosse)}
+          style={tosse ? styles.buttonActive : styles.buttonInactive}
+        >
+          Tosse seca
+        </Text>
+        <Text
+          style={febre ? styles.buttonActive : styles.buttonInactive}
+          onPress={() => setFebre(!febre)}
+        >
+          Febre
+        </Text>
+        <Text
+          style={respirar ? styles.buttonActive : styles.buttonInactive}
+          onPress={() => setRespirar(!respirar)}
+        >
+          Dificuldade de respirar
+        </Text>
+        <Text
+          style={fadiga ? styles.buttonActive : styles.buttonInactive}
+          onPress={() => setFadiga(!fadiga)}
+        >
+          Fadiga
+        </Text>
+        <Text
+          style={diarreia ? styles.buttonActive : styles.buttonInactive}
+          onPress={() => setDiarreia(!diarreia)}
+        >
+          Diarreia
+        </Text>
+        <Text
+          style={dor ? styles.buttonActive : styles.buttonInactive}
+          onPress={() => setDor(!dor)}
+        >
+          Dor de cabeça
+        </Text>
       </View>
 
       <View>
@@ -43,11 +73,6 @@ export default function Sintomas({ navigation }) {
           Fui diagnosticado
         </Text>
       </View>
-
-      <Text style={styles.enviar}>
-        Enviar
-        <Icon name="arrow-right" size={24} color="#FF6B6B" />
-      </Text>
 
       <NavBar navigation={navigation} />
     </View>
@@ -60,6 +85,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#e4e4e4",
     alignItems: "center",
     justifyContent: "space-around",
+    paddingBottom: 75,
   },
 
   title: {
@@ -67,11 +93,23 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  card: {
+  buttonInactive: {
     fontSize: 16,
     textAlign: "center",
     textAlignVertical: "center",
     backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 5,
+    padding: 15,
+    margin: 5,
+  },
+  buttonActive: {
+    fontSize: 16,
+    color: "#fff",
+    textAlign: "center",
+    textAlignVertical: "center",
+    backgroundColor: "#BB4747",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 5,
