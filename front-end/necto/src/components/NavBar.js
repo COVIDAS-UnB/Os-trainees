@@ -1,5 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { NavigationRouteContext } from "@react-navigation/native";
 import { Dimensions } from "react-native";

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View} from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 
@@ -10,21 +10,20 @@ export default function ProfilePage({ navigation }) {
   return (
     <View style={styles.container}>
 
-      <Icon name="account-circle" size={180} color="#FFF" />
-      <Text style={styles.name}>ANA PAULA NÓBREGA</Text>
-      <View style={styles.informacao}>
-       
-        
-        <Text style={styles.idade}>Idade: 19 anos</Text>
-        <Text style={styles.matricula}>Matricula: 198236737</Text>
-        <Text style={styles.curso}>Curso: Arquitetura</Text>
-      </View>
-      <View style={styles.container2}>
-      <Text style={styles.title}> Como está sua saúde no momento?</Text>
-      
-        <Text style={styles.bem} >Bem</Text>
-        <Text style={styles.mal} >Mal</Text>
+      <Icon style={styles.icon} name="account-circle" size={150} color="#FFF" />
+      <Text style={styles.name}>Ana Paula Nóbrega</Text>
 
+      <View style={styles.informacao}>             
+        <Text style={styles.itemInfo}>Idade: 19 anos</Text>
+        <Text style={styles.itemInfo}>Matricula: 198236737</Text>
+        <Text style={styles.itemInfo}>Curso: Arquitetura</Text>
+      </View>
+
+      <Text style={styles.question}> Como está sua saúde no momento?</Text>
+      
+      <View style={styles.enquete}>
+        <Text style={styles.button} >Bem</Text>
+        <Text style={styles.button} >Mal</Text>
       </View>
 
       <NavBar navigation={navigation} />
@@ -36,52 +35,63 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignContent: "center",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
   },
+
+  icon: {
+    alignSelf: "center",
+  },
+  
   name: {
     alignSelf: "center",
-    position: "absolute",
-    fontSize: 17,
-    width: 280,
+    fontSize: 25,
+    width: 300,
     padding: 10,
+    paddingBottom: 20,
     margin: 10,
-    color: "black", 
     textAlign: "center",
+    borderBottomWidth: 1,
+    borderBottomColor: "gray",
   },
-  container2: {
+
+  enquete: {
     display: "flex",
   },
+
   informacao: {
-    padding: 40,
+    padding: 20,
     backgroundColor: "white",
     borderRadius: 20,
     margin: 20,
-    marginTop: 45,
+    marginTop: 10,
   },
-  bem:{
+
+  itemInfo: {
+    fontSize: 16,
+    lineHeight: 25,
+  },
+
+  question:{
     fontSize: 18,
-    padding: 10,
-    borderRadius: 30,
-    alignSelf: "center",
-    backgroundColor: "#A8A7AB",
-    borderRadius: 30,
-    color: "white",
-    margin: 15,
-  },
-  mal:{
-    fontSize: 18,
-    padding: 10,
-    borderRadius: 30,
-    alignSelf: "center",
-    backgroundColor: "#A8A7AB",
-    borderRadius: 30,
-    color: "white",
-    margin: 15,
-  },
-  title:{
     textAlign: "center",
     alignContent: "center",
-    position: "absolute",
-  }
-  
+    alignSelf: "center",
+  },
+
+  enquete: {
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+
+  button:{
+    fontSize: 18,
+    padding: 15,
+    borderRadius: 10,
+    alignSelf: "center",
+    backgroundColor: "#A8A7AB",
+    color: "white",
+    marginLeft: 40,
+    marginRight: 40,
+    marginBottom: 60,
+  },
 });
