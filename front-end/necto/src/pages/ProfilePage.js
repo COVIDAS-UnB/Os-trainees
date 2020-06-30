@@ -1,30 +1,29 @@
 import React from "react";
-import { StyleSheet, Text, View} from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-
 import NavBar from "../components/NavBar";
+import ScanButton from "../components/ScanButton";
 
 export default function ProfilePage({ navigation }) {
- 
   return (
     <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        <Icon
+          style={styles.icon}
+          name="account-circle"
+          size={150}
+          color="#FFF"
+        />
+        <Text style={styles.name}>Ana Paula Nóbrega</Text>
 
-      <Icon style={styles.icon} name="account-circle" size={150} color="#FFF" />
-      <Text style={styles.name}>Ana Paula Nóbrega</Text>
-
-      <View style={styles.informacao}>             
-        <Text style={styles.itemInfo}>Idade: 19 anos</Text>
-        <Text style={styles.itemInfo}>Matricula: 198236737</Text>
-        <Text style={styles.itemInfo}>Curso: Arquitetura</Text>
-      </View>
-
-      <Text style={styles.question}> Como está sua saúde no momento?</Text>
-      
-      <View style={styles.enquete}>
-        <Text style={styles.button} >Bem</Text>
-        <Text style={styles.button} >Mal</Text>
-      </View>
+        <View style={styles.informacao}>
+          <Text style={styles.itemInfo}>Idade: 19 anos</Text>
+          <Text style={styles.itemInfo}>Matricula: 198236737</Text>
+          <Text style={styles.itemInfo}>Curso: Arquitetura</Text>
+        </View>
+      </ScrollView>
+      <ScanButton navigation={navigation} />
 
       <NavBar navigation={navigation} />
     </View>
@@ -38,10 +37,14 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
 
+  contentContainer: {
+    paddingBottom: 75,
+  },
+
   icon: {
     alignSelf: "center",
   },
-  
+
   name: {
     alignSelf: "center",
     fontSize: 25,
@@ -71,7 +74,7 @@ const styles = StyleSheet.create({
     lineHeight: 25,
   },
 
-  question:{
+  question: {
     fontSize: 18,
     textAlign: "center",
     alignContent: "center",
@@ -81,17 +84,29 @@ const styles = StyleSheet.create({
   enquete: {
     flexDirection: "row",
     justifyContent: "center",
+    marginBottom: 20,
   },
 
-  button:{
+  buttonBem: {
     fontSize: 18,
     padding: 15,
     borderRadius: 10,
     alignSelf: "center",
-    backgroundColor: "#A8A7AB",
+    backgroundColor: "#47BB4c",
     color: "white",
-    marginLeft: 40,
-    marginRight: 40,
+    marginHorizontal: 30,
     marginBottom: 60,
+    marginTop: 30,
+  },
+  buttonMal: {
+    fontSize: 18,
+    padding: 15,
+    borderRadius: 10,
+    alignSelf: "center",
+    backgroundColor: "#bb4747",
+    color: "white",
+    marginHorizontal: 20,
+    marginBottom: 60,
+    marginTop: 30,
   },
 });

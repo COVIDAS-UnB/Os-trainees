@@ -1,12 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, ScrollView, View, Image } from "react-native";
 
 import NavBar from "../components/NavBar";
+import ScanButton from "../components/ScanButton";
 
-export default function MapPage({ navigation }) {
+export default function HistoryPage({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Map Page</Text>
+      <ScanButton navigation={navigation} />
+      <Image style={styles.map} source={require("../../assets/Map.png")} />
       <NavBar navigation={navigation} />
     </View>
   );
@@ -14,7 +16,9 @@ export default function MapPage({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
-    alignItems: "center",
+    flex: 1,
+  },
+  contentContainer: {
+    marginBottom: 75,
   },
 });
